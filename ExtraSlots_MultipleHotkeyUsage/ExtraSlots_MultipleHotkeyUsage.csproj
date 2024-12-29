@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>ExtraSlots_MultipleHotkeyUsage</AssemblyName>
+    <Product>ExtraSlots_MultipleHotkeyUsage</Product>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>ExtraSlots_MultipleHotkeyUsage</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+    <!-- <PackageReference Include="UnityEngine.Modules" Version="3.5.12835711" IncludeAssets="compile" /> -->
+    <Reference Include="assembly_valheim">
+      <HintPath>lib\assembly_valheim_publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>lib\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>lib\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtraSlots">
+      <HintPath>lib\ExtraSlots_publicized.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

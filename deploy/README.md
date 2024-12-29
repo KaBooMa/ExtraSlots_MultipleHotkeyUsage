@@ -1,0 +1,1 @@
+Use all food / quick slot items with the same hotkey.

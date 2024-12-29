@@ -3,5 +3,5 @@
     "version_number": "1.0.0",
     "website_url": "https://github.com/KaBooMa/ExtraSlots_MultipleHotkeyUsage",
     "description": "Use all food / quick slot items with the same hotkey.",
-    "dependencies": ["shudnal.ExtraSlots"]
+    "dependencies": ["shudnal-ExtraSlots-1.0.16"]
   }
